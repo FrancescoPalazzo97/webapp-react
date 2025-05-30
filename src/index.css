@@ -35,3 +35,14 @@ nav {
   background-color: #0f1a20;
   color: white;
 }
+
+.reviews-container {
+  border-top: 2px solid #1e1e1e;
+  padding-top: 5px;
+}
+
+.reviews-container .card {
+  background-color: #0f1a20;
+  color: white;
+  border-color: #1e1e1e;
+}

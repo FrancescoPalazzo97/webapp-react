@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom"
 import moviesArray from "../assets/moviesArray"
+import reviews from "../assets/reviews"
+import ReviewCard from "../components/ReviewCard"
 
 const DetailsPage = () => {
 
@@ -9,8 +11,11 @@ const DetailsPage = () => {
     const movie = moviesArray.find(movie => movie.id === id);
     console.log(movie);
 
+    const filteredReviews = reviews.filter(review => review.film_id === id);
+    console.log(filteredReviews)
+
     return (
-        <div className="row my-5">
+        <div className="row py-5 h-100">
             <div className="col">
                 <div id="movie-details" className="card mb-3 border-0">
                     <div className="row g-0">
@@ -24,6 +29,14 @@ const DetailsPage = () => {
                                 <p className="card-text"><small>Regista: {movie.director}</small></p>
                                 <p className="card-text"><small>Genere: {movie.genre}</small></p>
                                 <p className="card-text"><small>Anno di uscita: {movie.release_year}</small></p>
+                                <div className="reviews-container">
+                                    <h4>Recensioni</h4>
+                                    {
+                                        filteredReviews.map(review => (
+                                            <ReviewCard key={review.id} review={review} />
+                                        ))
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>

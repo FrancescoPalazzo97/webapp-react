@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const Header = () => {
     return (
-        <nav className="navbar">
+        <nav className="navbar fixed-top">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to={`/`}>
                     <img src="/react.svg" alt="Logo" className="img-fluid" />
