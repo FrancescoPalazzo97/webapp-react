@@ -1,12 +1,36 @@
-# React + Vite
+# Setup Web App React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ciao ragazzi, esercizio di oggi: **Setup Web App React**
 
-Currently, two official plugins are available:
+**repo:** webapp-react
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Esercizio
 
-## Expanding the ESLint configuration
+Ora è il momento di prepararci al frontend della nostra Web App!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## MILESTONE 1
+
+- Mettiamo su un nuovo progetto React aiutandoci con Vite
+- Ripuliamo come sempre l'app da tutto il codice di esempio non necessari
+- Installiamo il necessario: React Router, Axios (oggi non è obbligatorio installarlo, lo sarà martedì) e Bootstrap (se volete utilizzarlo)
+
+## MILESTONE 2
+
+Creiamo un layout di base per la nostra applicazione ed impostiamo le rotte per le diverse pagine.
+
+Creiamo 2 pagine:
+- La home, in cui mostreremo la lista dei film
+- La pagina di dettaglio di un singolo film in cui mostrare sia le informazioni del film che le recensioni
+
+Fate tutto statico.
+
+## Bonus
+
+- Create un array finto di film da ciclare e mostrare nella homepage
+- Create la componente MovieCard in cui passare tramite props il singolo libro
+
+## SUPER BONUS
+
+Nella pagina di dettaglio del film copiate l'array del film aggiungendo a ciascun oggetto un'array di recensioni, trovate un elemento dell'array da mostrare nella pagina attraverso l'id che avete passato come parametro e mostratelo in pagina assieme alle sue recensioni
+
+**Buon Lavoro e buon weekend**
