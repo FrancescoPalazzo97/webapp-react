@@ -6,13 +6,15 @@ const Card = ({ movie }) => {
 
     return (
         <div className="col-12">
-            <Link>
+            <Link to={`${id}`}>
                 <div className="card text-bg-dark">
                     <img src={image} className="card-img-top" alt="..." />
                     <div className="card-img-overlay">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{abstract}</p>
-                        <p className="card-text"><small>Last updated 3 mins ago</small></p>
+                        <p className="card-text"><small>Regista: {director}</small></p>
+                        <p className="card-text"><small>Genere: {genre}</small></p>
+                        <p className="card-text"><small>Anno di uscita: {release_year}</small></p>
                     </div>
                 </div>
             </Link>

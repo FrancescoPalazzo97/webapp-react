@@ -1,5 +1,5 @@
 import moviesArray from "../assets/moviesArray"
-import Card from "./Card"
+import Card from "../components/Card"
 
 const HomePage = () => {
     return (

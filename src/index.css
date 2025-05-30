@@ -7,6 +7,11 @@ nav .h1 {
   color: white;
 }
 
+nav .h1:hover {
+  margin-left: 5px;
+  color: white;
+}
+
 h1 {
   text-transform: uppercase;
   color: white;
@@ -24,4 +29,9 @@ nav {
 
 .card:hover .card-img-overlay {
   opacity: 1;
+}
+
+#movie-details.card {
+  background-color: #0f1a20;
+  color: white;
 }
