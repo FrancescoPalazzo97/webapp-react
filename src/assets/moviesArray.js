@@ -1,4 +1,4 @@
-const film = [
+const movies = [
     {
         id: 1,
         title: "Inception",
@@ -42,7 +42,7 @@ const film = [
         genre: "Drammatico",
         release_year: 1988,
         abstract: "Un regista di successo torna in Sicilia e ricorda la sua infanzia e l'amicizia con un proiezionista.",
-        image: "https://image.tmdb.org/t/p/w500/1kUbi4z0QqdzvK8RqdEaMlZfeQz.jpg"
+        image: "/covers-movies/nuovo-cinema-paradiso.webp"
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ const film = [
         genre: "Storico/Azione",
         release_year: 2000,
         abstract: "Un generale romano diventa gladiatore per vendicarsi dell'imperatore che ha ucciso la sua famiglia.",
-        image: "https://image.tmdb.org/t/p/w500/6WBIzCgmDCYrqh64yDREGeDk9d3.jpg"
+        image: "/covers-movies/il-gladiatore.webp"
     },
     {
         id: 7,
@@ -87,7 +87,7 @@ const film = [
         genre: "Western",
         release_year: 2012,
         abstract: "Uno schiavo liberato diventa un cacciatore di taglie per ritrovare sua moglie.",
-        image: "https://image.tmdb.org/t/p/w500/5WJnxuw41sddupf8cwOxYftuvJG.jpg"
+        image: "/covers-movies/django.webp"
     }
 ];
 
