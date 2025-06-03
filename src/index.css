@@ -21,6 +21,11 @@ nav {
   background-color: #0a0a0a;
 }
 
+.card img {
+  height: 450px;
+  object-fit: cover;
+}
+
 .card-img-overlay {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.4);
