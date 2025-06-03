@@ -1,14 +1,17 @@
+import MovieRating from "./MovieRating";
 
 const ReviewCard = ({ review }) => {
 
-    const { name, vote, created_at, text } = review;
+    const { name, vote, text } = review;
 
     return (
-        <div class="card my-2">
-            <h5 class="card-header">{name}</h5>
-            <div class="card-body">
-                <p class="card-text">{text}</p>
-                <p class="card-text">Voto: {vote}</p>
+        <div className="card my-2">
+            <h5 className="card-header">{name}</h5>
+            <div className="card-body">
+                <p className="card-text">{text}</p>
+                <p className="card-text">
+                    <MovieRating vote={vote} />
+                </p>
             </div>
         </div>
     )
