@@ -1,18 +1,35 @@
-import { useParams } from "react-router-dom"
-import moviesArray from "../assets/moviesArray"
-import reviews from "../assets/reviews"
-import ReviewCard from "../components/ReviewCard"
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+// import moviesArray from "../assets/moviesArray"
+// import reviews from "../assets/reviews"
+import ReviewCard from "../components/ReviewCard";
+import axios from "axios";
+const MY_API = import.meta.env.VITE_MY_API;
+const API_Movies = `${MY_API}/movies`
 
 const DetailsPage = () => {
 
     let { id } = useParams();
     id = parseInt(id);
 
-    const movie = moviesArray.find(movie => movie.id === id);
-    console.log(movie);
+    const [movie, setMovie] = useState({});
 
-    const filteredReviews = reviews.filter(review => review.film_id === id);
-    console.log(filteredReviews)
+    const getMovie = () => {
+        axios.get(`${API_Movies}/${id}`)
+            .then(res => {
+                setMovie(res.data);
+            })
+    }
+
+    useEffect(() => {
+        getMovie();
+    }, [])
+
+    // const movie = moviesArray.find(movie => movie.id === id);
+    // console.log(movie);
+
+    // const filteredReviews = reviews.filter(review => review.film_id === id);
+    // console.log(filteredReviews)
 
     return (
         <div className="row py-5 h-100">
@@ -31,8 +48,10 @@ const DetailsPage = () => {
                                 <p className="card-text"><small>Anno di uscita: {movie.release_year}</small></p>
                                 <div className="reviews-container">
                                     <h4>Recensioni</h4>
-                                    {
-                                        filteredReviews.map(review => (
+                                    {!movie.reviews ? (
+                                        <></>
+                                    ) :
+                                        movie.reviews.map(review => (
                                             <ReviewCard key={review.id} review={review} />
                                         ))
                                     }

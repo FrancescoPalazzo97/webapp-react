@@ -1,14 +1,14 @@
 
 const ReviewCard = ({ review }) => {
 
-    const { autore, voto, data, testo } = review;
+    const { name, vote, created_at, text } = review;
 
     return (
         <div class="card my-2">
-            <h5 class="card-header">{autore}</h5>
+            <h5 class="card-header">{name}</h5>
             <div class="card-body">
-                <p class="card-text">{testo}</p>
-                <p class="card-text">Voto: {voto}</p>
+                <p class="card-text">{text}</p>
+                <p class="card-text">Voto: {vote}</p>
             </div>
         </div>
     )
