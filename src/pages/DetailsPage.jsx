@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import moviesArray from "../assets/moviesArray"
-// import reviews from "../assets/reviews"
 import ReviewCard from "../components/ReviewCard";
 import MovieRating from "../components/MovieRating";
+import ReviewForm from "../components/ReviewForm";
 import axios from "axios";
 const MY_API = import.meta.env.VITE_MY_API;
 const API_Movies = `${MY_API}/movies`
@@ -47,7 +46,7 @@ const DetailsPage = () => {
 
     return (
         <div className="row py-5 h-100">
-            <div className="col">
+            <div className="col-12">
                 <div id="movie-details" className="card mb-3 border-0">
                     <div className="row g-0">
                         <div className="col-md-4">
@@ -61,17 +60,28 @@ const DetailsPage = () => {
                                 <p className="card-text"><small>Genere: {movie.genre}</small></p>
                                 <p className="card-text"><small>Anno di uscita: {movie.release_year}</small></p>
                                 <p className="card-text"> Media voti: <MovieRating vote={getAvgVote()} /></p>
-                                <div className="reviews-container">
-                                    <h4>Recensioni</h4>
-                                    {!movie.reviews ? (
-                                        <></>
-                                    ) :
-                                        movie.reviews.map(review => (
-                                            <ReviewCard key={review.id} review={review} />
-                                        ))
-                                    }
-                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-12">
+                <div className="card bg-darkblue">
+                    <div className="row">
+                        <div className="col-12 col-md-8 order-1 order-md-0">
+                            <div className="reviews-container">
+                                <h4>Recensioni</h4>
+                                {!movie.reviews ? (
+                                    <></>
+                                ) :
+                                    movie.reviews.map(review => (
+                                        <ReviewCard key={review.id} review={review} />
+                                    ))
+                                }
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-4 order-0 order-md-1">
+                            <ReviewForm movie_id={movie.id} reloadMovie={getMovie} />
                         </div>
                     </div>
                 </div>

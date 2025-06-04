@@ -46,6 +46,11 @@ nav {
   padding-top: 5px;
 }
 
+.bg-darkblue {
+  background-color: #0f1a20;
+}
+
+.reviews-container,
 .reviews-container .card {
   background-color: #0f1a20;
   color: white;
